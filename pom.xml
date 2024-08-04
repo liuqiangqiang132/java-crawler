@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.liuqiang</groupId>
+    <artifactId>java-crawler</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+<!--模块化编程-->
+    <modules>
+        <module>01_httpclient</module>
+        <module>02_jsoup</module>
+        <module>03_jdShop_http_jsoup</module>
+        <module>04_webmagic</module>
+        <module>05_crawlerj</module>
+        <module>06_jdShop_webmagic_crawler4j</module>
+        <module>07_webcollector</module>
+        <module>08_selenium</module>
+    </modules>
+
+
+<!--依赖的版本声明-->
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project-hutool-version>5.7.10</project-hutool-version>
+    </properties>
+
+<!-- 以后的springBoot项目得用到-->
+    <parent>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <groupId>org.springframework.boot</groupId>
+        <version>2.7.0</version>
+    </parent>
+<!-- 依赖的版本控制-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${project-hutool-version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
