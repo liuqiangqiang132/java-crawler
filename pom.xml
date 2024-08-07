@@ -26,7 +26,6 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <project-hutool-version>5.7.10</project-hutool-version>
     </properties>
 
 <!-- 以后的springBoot项目得用到-->
@@ -38,11 +37,7 @@
 <!-- 依赖的版本控制-->
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>cn.hutool</groupId>
-                <artifactId>hutool-all</artifactId>
-                <version>${project-hutool-version}</version>
-            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
