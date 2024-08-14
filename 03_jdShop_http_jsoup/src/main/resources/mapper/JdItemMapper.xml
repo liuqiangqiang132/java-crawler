@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuqiang.jd.mapper.JdItemMapper">
+
+<!-- 查询-->
+    <select id="getALlJdItemList" resultType="jdItem">
+        select spu,sku,title,price,url,create_time,update_time from  jdItem
+    </select>
+<!--    -->
+<!--    -->
+<!--    <update id="" parameterType="jdItem">-->
+<!--        update set  jdItem -->
+<!--        <where>-->
+<!--            <foreach collection="items" open="(" separator="," close=")">-->
+<!--                #{item}-->
+<!--            </foreach>-->
+<!--        </where>-->
+<!--    </update>-->
+
+</mapper>

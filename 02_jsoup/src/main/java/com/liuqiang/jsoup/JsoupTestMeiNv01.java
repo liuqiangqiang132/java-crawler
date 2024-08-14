@@ -26,8 +26,6 @@ public class JsoupTestMeiNv01 {
         //翻页网址: https://pic.netbian.com/4kmeinv/index_2.html
 
         //1.获取目标网址的网页---->html
-        //测试下载时长
-        Long start = System.currentTimeMillis();
 
         /**
          * 因为不知道怎样获取总页码,所以通过查看发现
@@ -40,13 +38,9 @@ public class JsoupTestMeiNv01 {
                 String altText = element.attr("alt");
 
                 String newSrcImg = "https://pic.netbian.com" + srcImg;
-
                 //下载图片到本地
                 getDownloadImg(newSrcImg, altText);
 
-                Long end = System.currentTimeMillis();
-
-                System.out.println("下载图片的总时长:" + (end - start) / 1000 + "秒");
 
             }
         }

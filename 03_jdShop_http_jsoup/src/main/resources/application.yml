@@ -1,0 +1,17 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: jd-jsoup-httpClient-service
+
+#数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jd-jsoup?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: root
+
+#mybatis-plus的配置信息
+mybatis-plus:
+  type-aliases-package: com.liuqiang.jd.entity
+  mapper-locations: classpath*:/mapper/**/*.xml
