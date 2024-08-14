@@ -9,7 +9,8 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.io.IOException;
-import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Author: liuQiang132
@@ -41,7 +42,14 @@ public class JdTask {
     private void parse(String resultHtml) {
         //解析页面
         try {
-            Document document = Jsoup.parse(new URL(resultHtml), 100000);
+            Map<String,String> map = new HashMap<>();
+            map.put("thor","270FAE00B309BA8AA319F2A93046085F942185351D6E8A329078FC310118B00B76F317344C2D0C34A44728" +
+                    "82BE6FFBEDB348F5C4CD212D7E2065079D9D269EDCB13E71CAC9382537046C02FA6C584B60F1B8559E0BE4065121790" +
+                    "650AC97804E212B4F02E855BBB7B8B07B20BEFBC3145331C18B4F6A7DBBC477B9403F91591152D198E8A60A917896A1E608" +
+                    "BB140A99DE4D64817DAFEAD00285145F835243FB");
+            Document document = Jsoup.connect("https://search.jd.com/Search?" +
+                    "keyword=%E6%89%8B%E6%9C%BA&enc=utf-8&suggest=1.his.0.0" +
+                    "&wq=&pvid=f131db6fcc18456b8c8b2ae05155c7e9").cookies(map).get();
             //获取页面
             System.out.println(document);
         } catch (IOException e) {
