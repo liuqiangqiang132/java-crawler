@@ -26,6 +26,12 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <mysql.version>8.0.28</mysql.version>
+        <druid.version>1.2.23</druid.version>
+        <hutool.version>5.8.0</hutool.version>
+        <mybatis.flex.spring.boot.version>1.5.0</mybatis.flex.spring.boot.version>
+        <boot.version>2.7.0</boot.version>
+        <mybatis.plus.version>3.5.2</mybatis.plus.version>
     </properties>
 
 <!-- 以后的springBoot项目得用到-->
@@ -37,7 +43,41 @@
 <!-- 依赖的版本控制-->
     <dependencyManagement>
         <dependencies>
-
+<!-- mysql版本-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+<!-- druid数据源-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+<!--huTool工具包-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+<!--mybatis-flex集成springboot数据库操作-->
+            <dependency>
+                <groupId>com.mybatis-flex</groupId>
+                <artifactId>mybatis-flex-spring-boot-starter</artifactId>
+                <version>${mybatis.flex.spring.boot.version}</version>
+            </dependency>
+<!-- springboot集成web-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
