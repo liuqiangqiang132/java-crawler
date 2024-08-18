@@ -14,7 +14,7 @@ import java.util.Map;
 @Component
 public class ComponentUtils {
     //京东商城手机链接
-    public  final String JD_URL = "https://search.jd.com/Search?keyword=%E6%89%8B%E6%9C%BA&enc=utf-8&suggest=1.his.0.0&pvid=3a1c2755eae549a78a78840b45bd37b8";
+    public  final String JD_URL = "https://search.jd.com/Search?keyword=%E6%89%8B%E6%9C%BA&suggest=1.his.0.0&pvid=3a1c2755eae549a78a78840b45bd37b8&isList=0&s=56&click=0&log_id=1723776117896.2801&page=";
 
     /**
      * 设置网络Cookie
