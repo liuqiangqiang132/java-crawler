@@ -96,11 +96,14 @@ public class httpClientUtils {
 
     }
 
+    /**
+     * 优化文档的主要信息！！
+     * @return RequestConfig
+     */
     private RequestConfig getRequestConfig() {
-        RequestConfig build = RequestConfig.custom()
+      return    RequestConfig.custom()
                 .setSocketTimeout(10000)
                 .setConnectTimeout(100*100)
                 .build();
-        return build;
     }
 }

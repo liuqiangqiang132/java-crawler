@@ -18,7 +18,6 @@ public class ComponentUtils {
 
     /**
      * 设置网络Cookie
-     * @param MAP map
      * @return 存放cookie的数据！！！！！！！
      */
     public Map<String,String> getMap(){

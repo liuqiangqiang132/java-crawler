@@ -29,9 +29,12 @@ public class JdTask {
 
     @Scheduled(fixedDelay = 100*1000)
     public void init() {
-        //使用加载cookie的方式进行尝试！！！！！！！
+        /**
+         *使用加载cookie的方式进行尝试！！！！！！！
+         */
+
         for (int i = 1; i <10; i=i+2) {
-            String html = httpClientUtils.doGetHtml(componentUtils.JD_URL + i);
+            String html = httpClientUtils.doGetHtml(componentUtils.JD_URL + i); //如果cookie无法使用则直接使用即可！！！！！！！！
             parse(html);
         }
         System.out.println("数据抓取完成！！！！");

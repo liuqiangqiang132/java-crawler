@@ -20,11 +20,5 @@ public class JsoupAPITest02 {
 
         //方式三:  根据html网页来获取数据的
         Document parse = Jsoup.parse("");
-
-
-
-
-
-
     }
 }
