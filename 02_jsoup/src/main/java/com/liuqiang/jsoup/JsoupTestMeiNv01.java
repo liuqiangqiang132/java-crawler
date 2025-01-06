@@ -28,10 +28,11 @@ public class JsoupTestMeiNv01 {
         //1.获取目标网址的网页---->html
 
         /**
+         * https://pic.netbian.com/4kmeinv/index_2.html
          * 因为不知道怎样获取总页码,所以通过查看发现
          */
-        for (int i = 2; i <= 51; i++) {
-            Document document = Jsoup.parse(new URL("https://pic.netbian.com/4kmeinv/index_" + i + ".html"), 100000);
+
+            Document document = Jsoup.parse(new URL("https://pic.netbian.com/4kmeinv/index_" + 1 + ".html"), 1000000);
             Elements select = document.select("div.slist > ul.clearfix li img");
             for (Element element : select) {
                 String srcImg = element.attr("src");
@@ -44,8 +45,6 @@ public class JsoupTestMeiNv01 {
 
             }
         }
-
-    }
 
     /**
      * 使用NIO中的API下载图片到本地文件夹中
