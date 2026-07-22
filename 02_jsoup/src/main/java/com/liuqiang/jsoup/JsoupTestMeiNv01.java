@@ -32,7 +32,7 @@ public class JsoupTestMeiNv01 {
          * 因为不知道怎样获取总页码,所以通过查看发现
          */
 
-        Document document = Jsoup.parse(new URL("https://pic.netbian.com/4kmeinv/index_" + 1 + ".html"), 1000000);
+        Document document = Jsoup.parse(new URL("https://pic.netbian.com/4kmeinv/index_" + 2 + ".html"), 1000000);
         Elements select = document.select("div.slist > ul.clearfix li img");
         for (Element element : select) {
             String srcImg = element.attr("src");
@@ -55,7 +55,8 @@ public class JsoupTestMeiNv01 {
     private static void getDownloadImg(String newSrcImg, String altText) {
         try {
             URLConnection urlConnection = new URL(newSrcImg).openConnection();
-            urlConnection.setRequestProperty("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0");
+            urlConnection.setRequestProperty("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36");
+            urlConnection.setRequestProperty("bdwaf-request-id","53eb9a2b-6b86-4572-b52c-2020b6c6dfb6");
             InputStream inputStream = urlConnection.getInputStream();
 //            Files.copy(inputStream, Paths.get("C:\\Users\\liuqiang132\\Desktop\\彼岸图库\\"+altText+".jpg"));
 
