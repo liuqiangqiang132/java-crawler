@@ -19,6 +19,7 @@
         <module>06_jdShop_webmagic_crawler4j</module>
         <module>07_webcollector</module>
         <module>08_selenium</module>
+        <module>09_jd_end</module>
     </modules>
 
 
