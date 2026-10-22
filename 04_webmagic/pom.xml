@@ -10,10 +10,38 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>04_webMagic</artifactId>
-
+<!--使用jdk1.8-->
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
+
+    <dependencies>
+<!-- webmagic的核心依赖-->
+        <dependency>
+            <groupId>us.codecraft</groupId>
+            <artifactId>webmagic-core</artifactId>
+            <version>0.8.0</version>
+        </dependency>
+<!-- webmagic的扩展依赖-->
+        <dependency>
+            <groupId>us.codecraft</groupId>
+            <artifactId>webmagic-extension</artifactId>
+            <version>0.8.0</version>
+<!-- 排除掉日志依赖-->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+<!--  添加slf4j依赖-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
